@@ -776,6 +776,7 @@ class YoutubeMusicProvider(MusicProvider):
 
     async def _user_has_ytm_premium(self) -> bool:
         """Check if the user has Youtube Music Premium."""
+        return True
         stream_format = await self._get_stream_format(YTM_PREMIUM_CHECK_TRACK_ID)
         # Only premium users can stream the HQ stream of this song
         return stream_format["format_id"] == "141"
